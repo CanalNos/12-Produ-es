@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - 12 Produções</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Outfit', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#3b82f6',
+                            accent: '#8b5cf6',
+                            tv: '#ef4444',
+                            design: '#10b981'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Configurações de Impressão para PDF Perfeito */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+        }
+        .a4-page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: #0f172a;
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 text-white font-sans">
+
+    <!-- Botão Flutuante para Gerar PDF -->
+    <div class="fixed top-4 right-4 z-50 no-print">
+        <button onclick="window.print()" class="bg-brand-primary hover:bg-white hover:text-brand-primary text-white font-bold py-3 px-6 rounded-full shadow-lg transition flex items-center gap-2">
+            <i class="fas fa-file-pdf"></i> Salvar como PDF
+        </button>
+    </div>
+
+    <!-- PÁGINA 1: CAPA -->
+    <div class="a4-page flex flex-col justify-center items-center text-center relative p-12 border-b border-gray-800">
+        <!-- Imagem de Fundo Suave -->
+        <div class="absolute inset-0 bg-[url('https://i.ibb.co/hxVJDztM/Capa.jpg')] bg-cover bg-center opacity-30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-transparent"></div>
+
+        <div class="relative z-10 w-full">
+            <div class="mb-8">
+                <img src="https://i.ibb.co/hxVJDztM/Capa.jpg" alt="12 Produções" class="h-32 mx-auto object-contain drop-shadow-2xl">
+            </div>
+            <h1 class="text-6xl font-black uppercase tracking-tighter mb-4 leading-tight">
+                Comunicação <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-accent">Sem Limites</span>
+            </h1>
+            <p class="text-xl text-gray-300 tracking-widest uppercase mb-12 border-t border-b border-gray-600 py-4 inline-block">
+                Portfólio Oficial 2024
+            </p>
+            
+            <div class="grid grid-cols-3 gap-4 max-w-2xl mx-auto mt-12">
+                <div class="bg-gray-800/80 p-4 rounded-xl border border-brand-accent/30 backdrop-blur">
+                    <i class="fas fa-music text-3xl text-brand-accent mb-2"></i>
+                    <p class="font-bold">Studio Pro</p>
+                </div>
+                <div class="bg-gray-800/80 p-4 rounded-xl border border-brand-tv/30 backdrop-blur">
+                    <i class="fas fa-video text-3xl text-brand-tv mb-2"></i>
+                    <p class="font-bold">TV & Video</p>
+                </div>
+                <div class="bg-gray-800/80 p-4 rounded-xl border border-brand-design/30 backdrop-blur">
+                    <i class="fas fa-pen-nib text-3xl text-brand-design mb-2"></i>
+                    <p class="font-bold">Design</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-12 text-gray-500 text-sm">
+            www.12producoes.com | Luanda, Angola
+        </div>
+    </div>
+
+    <!-- PÁGINA 2: SERVIÇOS E EQUIPE -->
+    <div class="a4-page p-12 page-break bg-brand-dark">
+        <div class="flex items-center justify-between mb-12 border-b border-gray-700 pb-4">
+            <h2 class="text-3xl font-bold text-white">Nossa Expertise</h2>
+            <span class="text-brand-primary font-bold">02</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-12 mb-12">
+            <div>
+                <h3 class="text-2xl font-bold text-brand-accent mb-4">Áudio & Música</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-center"><i class="fas fa-check text-brand-accent mr-3"></i> Gravação, Mix & Master</li>
+                    <li class="flex items-center"><i class="fas fa-check text-brand-accent mr-3"></i> Produção de Beats Exclusivos</li>
+                    <li class="flex items-center"><i class="fas fa-check text-brand-accent mr-3"></i> Spots Publicitários e Jingles</li>
+                    <li class="flex items-center"><i class="fas fa-check text-brand-accent mr-3"></i> Locução Profissional (Voz Off)</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-2xl font-bold text-brand-tv mb-4">Visual & TV</h3>
+                <ul class="space-y-3 text-gray-300">
+                    <li class="flex items-center"><i class="fas fa-check text-brand-tv mr-3"></i> Transmissões Ao Vivo (Streaming)</li>
+                    <li class="flex items-center"><i class="fas fa-check text-brand-tv mr-3"></i> Produção de Videoclipes</li>
+                    <li class="flex items-center"><i class="fas fa-check text-brand-tv mr-3"></i> Cobertura de Eventos</li>
+                    <li class="flex items-center"><i class="fas fa-check text-brand-tv mr-3"></i> Estúdio para Podcasts</li>
+                </ul>
+            </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-white mb-6">Quem Faz Acontecer</h3>
+        <div class="grid grid-cols-3 gap-6 mb-12">
+            <!-- Membro 1 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <img src="https://i.ibb.co/fGrGvJQQ/Ceo.jpg" class="w-full h-40 object-cover grayscale hover:grayscale-0 transition">
+                <div class="p-4">
+                    <h4 class="font-bold">Felo G.F</h4>
+                    <p class="text-xs text-brand-primary uppercase">CEO & Produtor</p>
+                </div>
+            </div>
+            <!-- Membro 2 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <img src="https://i.ibb.co/GvRyX6r6/Leticia.jpg" class="w-full h-40 object-cover grayscale hover:grayscale-0 transition">
+                <div class="p-4">
+                    <h4 class="font-bold">Leticia Manuel</h4>
+                    <p class="text-xs text-brand-tv uppercase">Diretora TV</p>
+                </div>
+            </div>
+            <!-- Membro 3 -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
+                <img src="https://i.ibb.co/7Ntw0Spk/abel.jpg" class="w-full h-40 object-cover grayscale hover:grayscale-0 transition">
+                <div class="p-4">
+                    <h4 class="font-bold">Abel Soares</h4>
+                    <p class="text-xs text-brand-design uppercase">Designer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 3: SHOWCASE VISUAL (DESIGN) -->
+    <div class="a4-page p-12 page-break bg-brand-dark">
+        <div class="flex items-center justify-between mb-8 border-b border-gray-700 pb-4">
+            <h2 class="text-3xl font-bold text-white">Identidade Visual</h2>
+            <span class="text-brand-design font-bold">03</span>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 h-[700px]">
+            <div class="rounded-2xl overflow-hidden border border-gray-700 relative">
+                <img src="https://i.ibb.co/hxVJDztM/Capa.jpg" class="w-full h-full object-cover">
+                <div class="absolute bottom-0 left-0 bg-black/70 w-full p-4">
+                    <p class="font-bold text-white">Capas de Álbuns</p>
+                </div>
+            </div>
+            <div class="grid grid-rows-2 gap-4">
+                <div class="rounded-2xl overflow-hidden border border-gray-700 relative">
+                    <img src="https://i.ibb.co/hxVJDztM/Capa.jpg" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 bg-black/70 w-full p-4">
+                        <p class="font-bold text-white">Social Media</p>
+                    </div>
+                </div>
+                <div class="rounded-2xl overflow-hidden border border-gray-700 relative">
+                    <img src="https://i.ibb.co/hxVJDztM/Capa.jpg" class="w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 bg-black/70 w-full p-4">
+                        <p class="font-bold text-white">Flyers de Eventos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA 4: TABELA E CONTATO -->
+    <div class="a4-page p-12 page-break bg-brand-dark flex flex-col justify-between">
+        <div>
+            <div class="flex items-center justify-between mb-12 border-b border-gray-700 pb-4">
+                <h2 class="text-3xl font-bold text-white">Investimento & Contato</h2>
+                <span class="text-white font-bold">04</span>
+            </div>
+
+            <!-- Tabela Simplificada -->
+            <table class="w-full text-left border-collapse mb-12">
+                <thead>
+                    <tr class="text-gray-400 border-b border-gray-700">
+                        <th class="py-3 font-medium">Serviço</th>
+                        <th class="py-3 font-medium">Detalhes</th>
+                        <th class="py-3 font-medium text-right">Valor</th>
+                    </tr>
+                </thead>
+                <tbody class="text-white">
+                    <tr class="border-b border-gray-800">
+                        <td class="py-4 font-bold text-brand-accent">Sessão de Estúdio</td>
+                        <td class="py-4 text-gray-400">Captação + Edição Básica</td>
+                        <td class="py-4 text-right font-bold">15.000 Kz/h</td>
+                    </tr>
+                    <tr class="border-b border-gray-800">
+                        <td class="py-4 font-bold text-brand-accent">Produção Single</td>
+                        <td class="py-4 text-gray-400">Beat + Captação + Mix/Master</td>
+                        <td class="py-4 text-right font-bold">80.000 Kz</td>
+                    </tr>
+                    <tr class="border-b border-gray-800">
+                        <td class="py-4 font-bold text-brand-design">Identidade Visual</td>
+                        <td class="py-4 text-gray-400">Logotipo + Manual da Marca</td>
+                        <td class="py-4 text-right font-bold">Sob Consulta</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="bg-gray-800 rounded-2xl p-8 text-center border border-gray-700">
+            <h3 class="text-2xl font-bold mb-6">Vamos criar algo incrível?</h3>
+            <p class="text-xl mb-2"><i class="fab fa-whatsapp text-green-500 mr-2"></i> +244 926 188 950</p>
+            <p class="text-xl mb-2"><i class="fas fa-envelope text-brand-primary mr-2"></i> contato@12producoes.com</p>
+            <p class="text-gray-400 mt-4 text-sm">Rua Principal, Luanda - Angola</p>
+        </div>
+    </div>
+
+</body>
+</html>
